@@ -21,7 +21,7 @@ class Meeting:
     def __init__(self, title: str, time: dt.datetime, deadline: Optional[dt.datetime], max_participants: int):
         self.id = None
         self.title = title
-        self.time = normalize_to_minutes(time) if time else None
+        self.time = normalize_to_minutes(time)
         self.deadline = normalize_to_minutes(deadline) if deadline else None
         self.max_participants = max_participants
         self._participants = set()
