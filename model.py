@@ -10,7 +10,7 @@ from errors import (
     UserNotJoinedException,
     UserAlreadyJoinedException
 )
-from .utils import normalize_to_minutes
+from utils import normalize_to_minutes
 
 @dataclass(frozen=True)
 class Participant:
