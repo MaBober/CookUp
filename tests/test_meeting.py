@@ -1,6 +1,15 @@
 import pytest
 import datetime as dt
 
+from model import Meeting, Participant
+from errors import (
+    MeetingFullException,
+    CannotJoinAfterDeadlineException,
+    CannotLeaveAfterDeadlineException,
+    UserNotJoinedException,
+    UserAlreadyJoinedException
+)
+
 base_now = dt.datetime.now()
 
 meeting_data = {
