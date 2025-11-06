@@ -12,6 +12,14 @@ from errors import (
 )
 from utils import normalize_to_minutes
 
+class User:
+    def __init__(self, first_name: str, last_name: str, email: str):
+        self.id = None
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        
+
 @dataclass(frozen=True)
 class Participant:
     user_id: int
@@ -64,5 +72,6 @@ class Meeting:
     @property
     def participants_amount(self) -> int:
         return len(self._participants)
+
 
 
